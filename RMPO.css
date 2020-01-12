@@ -20,8 +20,10 @@ h2 {
 }
 
 #input_course {
-    color: black;
-    padding: 0px 30px 0px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    text-align: center;
 }
 
 @font-face {
