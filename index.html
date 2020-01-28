@@ -2,14 +2,15 @@
 
 <head>
     <title>Rate My Professor Organizer</title>
-    <link src="/TeacherRatingEvaluation.js"></link>
+    <link src="./TeacherRatingEvaluation.js"></link>
+    <link src="./RatingTable.js"></link>
     <link rel="stylesheet" type="text/css" href="RMPO.css"></link>
     <script src="Course.js"></script>
 </head>
 
 <body class="organizer">
     <div id="title">
-        <h1>Rate My Professor Oranizer</h1>
+        <h1>Rate My Professor Organizer</h1>
         <h2>Type In A Course Then See Your Professor's Rating</h2>
         <p id="starting_paragraph">For the experience of a college student it can be tedious to have to repetiviely search for individual professor ratings. Based on that why not cut the time of searching for individual professors and look at ratings of all the professors that
             teach a particular course at your university. What you need to do is type in the university that you want to search the courses of then type in the desired course you want to see the ratings of.
@@ -20,11 +21,19 @@
         <input type="text" name="language" class="course_input" placeholder="Enter Course">
     </div>
     <div id="show_professors">
-        <script>
-            document.write("hello")
-        </script>
+        <table>
+            <thead>
+                <tr>
+                    <th>Professor</th>
+                    <th>Rating</th>
+                    <th>University</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody id="professor_data"></tbody>
+        </table>
     </div>
-    <script type="test/javascript" src="TeacherRatingEvaluation.js"></script>
+    <script type="text/javascript" src="RatingTable.js"></script>
 </body>
 
 </html>
