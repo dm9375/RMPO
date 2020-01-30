@@ -1,21 +1,28 @@
 var mongo = require('mongodb').MongoClient;
-var url = "placeURL here";
+var url = "mongodb+srv://sufferndan:1Danielek@cluster0-bk6vw.mongodb.net/test?retryWrites=true&w=majority";
 
-MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("mydb");
-    var professor = {
-        name: "Martinez",
-        rating: "2.7",
-        university: "RIT",
-        course: "Yeet"
-    };
-    dbo.collection("RMPO").insertone(professor, function(err, res) {
-        if (err) throw err;
-        console.log("inserted professor");
-        db.close;
+function add() {
+    mongo.connect(url, function(err, db) {
+        if (err) {
+            throw err;
+        } else {
+            var dbo = db.db("RMPO");
+            var professor = {
+                name: "Martinez",
+                rating: "2.7",
+                university: "RIT",
+                course: "Yeet"
+            };
+            dbo.collection("RMPO").insertone(professor, function(err, res) {
+                if (err) throw err;
+                console.log("inserted professor");
+                db.close;
+            });
+        }
     });
-});
+}
+
+add();
 
 /*Insert a bunch of objects at once */
 
