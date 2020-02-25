@@ -2,10 +2,7 @@
 
 <head>
     <title>Rate My Professor Organizer</title>
-    <link src="./TeacherRatingEvaluation.js"></link>
-    <link src="./RatingTable.js"></link>
     <link rel="stylesheet" type="text/css" href="RMPO.css"></link>
-    <script src="Course.js"></script>
 </head>
 
 <body class="organizer">
@@ -18,7 +15,9 @@
     </div>
     <div id="input_couse">
         <label>What Course Do You Want To See The Professor Rating?:</label>
-        <input type="text" name="language" class="course_input" placeholder="Enter Course">
+        <input type="text" name="language" id="uni_input" placeholder="Enter School">
+        <input type="text" name="language" id="course_input" placeholder="Enter Course">
+        <button id="query_exec">Find Rating</button>
     </div>
     <div id="show_professors">
         <table>
@@ -33,7 +32,8 @@
             <tbody id="professor_data"></tbody>
         </table>
     </div>
-    <script type="text/javascript" src="RatingTable.js"></script>
+    <script type="module" src="./DatabaseQuery.js"></script>
+    <script type="module" src="./RatingTable.js"></script>
 </body>
 
 </html>

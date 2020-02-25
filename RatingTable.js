@@ -1,17 +1,4 @@
-let sortDirect = false;
-let profData = [
-    { name: 'Abdul', rating: '2.7', university: 'RIT', course: 'Yeet' },
-    { name: 'Desell', rating: '3.4', university: 'RIT', course: 'Yeet' },
-    { name: 'Martinez', rating: '4.0', university: 'RIT', course: 'Yeet' },
-    { name: 'Travis', rating: '4.5', university: 'RIT', course: 'Yeet' },
-    { name: 'Keith', rating: '2.7', university: 'RIT', course: 'Yeet' }
-];
-
-window.onload = () => {
-    generateTable(profData);
-}
-
-function generateTable(profData) {
+export default function generateTable(profData) {
     const tableBody = document.getElementById('professor_data');
     let profHtml = '';
 
