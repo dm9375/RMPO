@@ -1,5 +1,5 @@
-import { generateTable } from './RatingTable.js';
-import { MongoClient } from 'mongodb';
+import { generateTable } from './RatingTable';
+import { MongoClient } from "mongodb";
 import { equal } from 'assert';
 
 // Connection URL

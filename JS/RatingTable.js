@@ -1,4 +1,4 @@
-export default function generateTable(profData) {
+export function generateTable(profData) {
     const tableBody = document.getElementById('professor_data');
     let profHtml = '';
 
